@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  padding-top: 109px;
+  /* padding-top: 109px; */
 }
 @media (max-width: 991px) {
   body {
@@ -187,8 +187,14 @@ html[dir="ltr"] .lang-word{
   flex-direction: revert;
 }
 .lang-section{
-  margin-inline-start: 15px;
+  padding-inline-start: 15px;
+  background: rgb(8, 121, 162);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-inline-end: 15px;
 }
+
 .language-anchor{
   font-size: 12px;
   color: #fff;
@@ -209,7 +215,7 @@ html[dir="ltr"] .language-anchor{
 }
 .chevron-down::after,
 .dropdown .hide-txt:after {
-  content: "";
+  content: "ï„‡";
   font-family: "line Awesome Free";
   font-size: 8px;
   margin-inline-start: 4px;
@@ -222,7 +228,7 @@ html[dir="ltr"] .language-anchor{
 /*top header*/
 header {
   position: fixed;
-  top: 0;
+  top: 37px;
   left: 0;
   width: 100%;
   z-index: 200;
@@ -285,6 +291,8 @@ align-items: center;
  display: flex;
  justify-content: center;
  transition: 0.5s;
+ background: rgb(8, 121, 162);
+ margin-inline-end: 2px;
 }
 .social-list li i{
   font-size: 14px;
@@ -322,8 +330,9 @@ align-items: center;
   font-size: 16px;
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
-  font-weight: 600;
+  font-weight: 500;
 }
+
 
 .nav-header li a:hover {
   color: var(--main-color);
@@ -339,6 +348,9 @@ align-items: center;
   margin: 0;
   padding: 0;
  
+}
+.social-for-mobile{
+  display: none;
 }
 html[dir="ltr"] .nav-header .big-menu{
   margin-inline-start: 55px;
@@ -442,12 +454,33 @@ width: 0;
 }
 .chevron-down::after {
   content: "";
-  font-family: "line Awesome Free";
+  font-family: "Font Awesome 5 Free";
   font-size: 10px;
   margin-inline-start: 5px;
   font-weight: 900;
 }
 @media (max-width: 991px) {
+  .social-for-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-for-mobile i{
+    margin-inline-end: 5px;
+  }
+  .social-for-mobile div{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .social-list{
+    margin-top: 20px;
+  }
+  .lang-section{
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    background-color: transparent;
+  }
   .second-social-side{
     display: none;
   }
@@ -469,7 +502,7 @@ width: 0;
     width: unset;
   }
   .cats-dispaly .cat-li{
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
   .cats-dispaly::before {
     display: none;
@@ -539,6 +572,7 @@ width: 0;
 }
 .fixed-header {
   position: fixed;
+  top:0;
 }
 .fixed-header .fixed-nav {
   margin: 0;
@@ -569,13 +603,13 @@ width: 0;
   display: none;
 }
 /* .open-bars::after {
-  content: "";
+  content: "ïƒ‰";
   font-family: "line Awesome Free";
   font-weight: 900;
   color: var(--black-color);
 }
 .close-bars::after {
-  content: "";
+  content: "ï€";
   font-family: "line Awesome Free";
   font-weight: 900;
   color: var(--black-color);
@@ -654,18 +688,20 @@ width: 0;
   transform: translateY(-50%) scaleX(-1);
 } */
 html[dir="rtl"] .open-search {
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
   display: inline-block;
 }
 .open-search::after {
   content: "";
-  font-family: "Line Awesome Free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 700;
+  font-size: 18px;
+  transform: scale(-1);
 }
 
 .close-search::after {
   content: "";
-  font-family: "Line Awesome Free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 700;
   color: var(--black-color);
 }
@@ -679,7 +715,7 @@ html[dir="rtl"] .open-search {
   transform: translateX(-50%);
 }
 .close-bars::after {
-  content: "";
+  content: "ï€";
   font-family: "line Awesome Free";
   font-weight: 900;
   color: var(--main-hover);
@@ -915,14 +951,13 @@ html[dir="rtl"] .open-search {
 /*                       about-us-section                             */
 .about-us-section {
   margin-top: 32px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .about-us-cont {
   /* text-align: center; */
-  display: grid;
-    
-    align-items: center;
-    grid-template-columns: repeat(2,1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .about-us-head {
   text-align: start;
@@ -937,7 +972,7 @@ html[dir="rtl"] .open-search {
   font-weight: 400;
   font-size: 19px;
   color: #000;
- max-width: 1000px; 
+  max-width: 620px;
   margin: 0 auto;
   margin-bottom: 39px;
 }
@@ -953,6 +988,7 @@ html[dir="rtl"] .open-search {
   font-size: 14px;
   text-transform: capitalize;
   transition: 0.5s;
+  font-weight: 600;
   
 }
 .more-button:hover{
@@ -974,20 +1010,28 @@ html[dir="rtl"] .open-search {
   .about-us-head {
     font-size: 20px;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .about-us-cont{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
   .about-us-pargh{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
+    max-width: 100%;
   }
   .more-button{
     margin: 0 auto 30px;
   }
   .about-us-cont figure{
-    margin: 0 auto;
+    margin: 45px auto 20px;
+    display: flex;
+    order: -1;
   }
 }
 /*                       about-us-section                             */
@@ -996,23 +1040,40 @@ html[dir="rtl"] .open-search {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 0;
+  overflow: hidden;
 }
 .vision {
   
   background-image: url(../images/vision-mission/01.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 70px 0 75px;
+  padding: 80px 0 86px;
   background-position: center;
+  transition: 0.5s;
+  height: 366px;
+ 
 }
 .mission {
-  
+  transition: 0.5s;
   background-image: url(../images/vision-mission/02.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 70px 0 75px;
+  padding: 80px 0 86px;
   background-position: center;
+  height: 366px;
 }
+.for-scale{
+  width: 765.5px;
+  overflow: hidden;
+}
+.for-scale:hover .vision{
+
+transform: scale(1.05);
+}
+.for-scale:hover .mission{
+
+  transform: scale(1.05);
+  }
 .features-cont{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1084,7 +1145,7 @@ width: 100%;
 @media (max-width: 767px) {
  
   .features {
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
   .features{
     grid-template-columns: repeat(1, 1fr);
@@ -1272,7 +1333,7 @@ width: 100%;
 
 @media (max-width: 767px) {
   .services {
-    padding:60px 0 30px 0 ;
+    padding: 60px 0 55px 0;
   }
   .section-head {
     font-size: 20px;
@@ -1337,6 +1398,7 @@ width: 100%;
 .img-block{
   position: relative;
   overflow: hidden;
+  height: 238px;
 }
 .img-block:hover .services-img {
   -webkit-transform: scale(1.05);
@@ -1355,7 +1417,7 @@ width: 100%;
    align-items: center;
   z-index: 99;
    cursor: pointer;
-   margin: 0 0 0.5rem;
+  
    visibility: hidden;
    opacity: 0;
    transition: 0.5s;
@@ -1400,6 +1462,8 @@ transition: 0.5s;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
+    margin-bottom: 20px;
+  
   
   }
   .contact-section{
@@ -1431,6 +1495,7 @@ transition: 0.5s;
   grid-template-columns: repeat(5,1fr);
   grid-gap: 30px;
   margin-top: 65px;
+  align-items: baseline;
 }
 
 /*                              brands-section                    */
@@ -1597,6 +1662,12 @@ footer {
   margin-inline-end: 17px;
   flex-shrink: 0;
 }
+.subscribe{
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: block;
+}
 .text span{
   color: #fff;
   font-size: 16px;
@@ -1644,6 +1715,7 @@ footer {
     max-height: 140px;
     flex-wrap: wrap;
   }
+
 
 }
 .nav-foot li {
@@ -1801,7 +1873,7 @@ footer {
 
 .footer-accordion:after {
   content: "";
-  font-family: "line Awesome Free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 13px;
   transition: all 0.5s ease-out;
@@ -1825,8 +1897,9 @@ html[dir="rtl"] .footer-accordion.active:after {
     font-size: 17px;
   }
   footer {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 50px 0 40px;
+    background-attachment: fixed;
   }
   .social {
     justify-content: center;
@@ -1845,7 +1918,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     text-align: center;
   }
   .nav-foot li {
-    margin: 0 0 10px;
+    /* margin: 0 0 10px; */
   }
   .services-letter {
     margin-bottom: 30px;
@@ -1874,7 +1947,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
  
   .brands{
-    padding: 40px 0 0;
+    padding: 50px 0 ;
   }
   .nav-header .img-logo img {
     max-width: 50px;
@@ -1976,12 +2049,12 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
 
   .nav-header .big-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
+    display: block;
+    /* flex-direction: column;
+    justify-content: flex-start; */
+    text-align: start;
     align-items: center;
-    padding: 25% 20px 20px;
+    padding: 10% 20px 20px;
     margin-inline-start: 0;
     /* height: 100%; */
   }
@@ -1996,7 +2069,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .nav-header li a {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     font-weight: 700;
     font-size: 20px;
@@ -2060,6 +2133,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .brands-record{
     grid-template-columns: repeat(2,1fr);
+    margin-top: 30px;
   }
   .footer-first-record{
     grid-template-columns: repeat(1,1fr);
@@ -2150,9 +2224,10 @@ html[dir="rtl"] .footer-accordion.active:after {
   .rec-1 span{
     font-size: 16px;
     text-align: center;
+    margin-bottom: 25px;
   }
   .more-btn{
-    margin: 0 auto;
+    margin: 0 auto 15px;
   }
 }
 
@@ -2161,6 +2236,12 @@ html[dir="rtl"] .footer-accordion.active:after {
 
   .fixed-search{
     display: flex;
+  }
+  .for-scale{
+    width: 100%;
+  }
+  header{
+    top:0;
   }
   /* .close-search {
     z-index: 99;
@@ -2214,6 +2295,12 @@ html[dir="rtl"] .footer-accordion.active:after {
   .more-btn{
     margin: 0;
   }
+  .img-block{
+    height: 192px;
+  }
+  .contact-section p{
+    max-width: 400px;
+  }
 }
 
 @media only screen and (max-width: 994px)  and (min-width: 768px)  {
@@ -2221,4 +2308,13 @@ html[dir="rtl"] .footer-accordion.active:after {
 .footer-first-record{
   grid-template-columns: repeat(2,1fr);
 }
+.img-block{
+  height: 139px;
+}
+
+}
+@media only screen and (max-width:1440px)  and (min-width: 960px)  {
+  .for-scale{
+    width: 100%;
+  }
 }

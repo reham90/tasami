@@ -1014,6 +1014,7 @@ html[dir="rtl"] .open-search {
     position: absolute;
     top: 0;
     left: 50%;
+    width:100%;
     transform: translateX(-50%);
   }
   .about-us-cont{
@@ -1517,7 +1518,7 @@ transition: 0.5s;
 }
 html[dir="ltr"] .contact-section{
   background-image: url(../images/contact-bg-2.png);
-  background-position: center;
+  background-position: 60% !important;
 }
 .blue-bg{
   background: var(--main-color);
@@ -2320,7 +2321,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .contact-section{
     min-height: auto;
-    background-position: center;
+    background-position: 40% !important;
   }
   .blue-bg{
    

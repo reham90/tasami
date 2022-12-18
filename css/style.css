@@ -472,6 +472,7 @@ width: 0;
   .social-for-mobile div{
     font-size: 20px;
     font-weight: 600;
+    color: var(--main-color);
   }
   .social-list{
     margin-top: 20px;

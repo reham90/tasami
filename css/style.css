@@ -2448,6 +2448,12 @@ html[dir="rtl"] .footer-accordion.active:after {
   .for-scale{
     width: 100%;
   }
+  .brands2-slider figure{
+    margin: 0;
+  }
+  .partners-section figure{
+    margin: 0;
+  }
   .partners-slider img{
     width: 70%;
   }
@@ -2607,6 +2613,10 @@ html[dir="rtl"] .footer-accordion.active:after {
   .more-button{
     margin: 0;
   }
+  .features-word i{
+    font-size: 30px;
+  }
+ 
 
 .img-block{
   height: 139px;

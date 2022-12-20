@@ -1136,6 +1136,7 @@ html[dir="ltr"] .about-us-pargh{
   grid-template-columns: repeat(2,1fr);
   grid-gap: 0;
   overflow: hidden;
+  background-color: #000;
 }
 .vision {
   

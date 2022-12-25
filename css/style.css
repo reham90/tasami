@@ -762,13 +762,13 @@ html[dir="rtl"] .open-search {
   }
   
   .brands2-slider .swiper-wrapper{
-    display: flex !important;
+    grid-template-columns: repeat(3,1fr) !important;
   }
   .brands2-slider img{
     width: 70%;
   }
   .brands2-slider .swiper-slide{
-    background: #ebf1ec;
+   
     height: 102px;
     align-items: center;
     justify-content: center;
@@ -1133,6 +1133,9 @@ html[dir="ltr"] .extra-margin-bottom .about-us-pargh{
     text-align: center;
     margin-bottom: 18px;
     max-width: 100%;
+  }
+  .extra-margin .about-us-pargh{
+    font-size: 16px;
   }
   .more-button{
     margin: 0 auto 30px;
@@ -2207,9 +2210,10 @@ ol.breadcrumb li:not(.active):after {
 
 @media (max-width: 991px){
   .custum-breadcrumb, .breadcrumb-sec {
-    background: none !important;
     padding: 50px 0 40px;
-    margin-top: 0;
+    margin-top: 21px;
+    height: 80px;
+    margin-bottom: 50px;
 }
 ol.breadcrumb {
   display: none;
@@ -2223,7 +2227,7 @@ ol.breadcrumb {
   margin: 0 0 30px;
 }
 .partners2-slider .swiper-slide{
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
 }
 /* .extra-margin .about-us-pargh{
   text-align: start;
@@ -2236,6 +2240,7 @@ ol.breadcrumb {
 }
 .why-us-list li{
   text-align: start !important;
+  font-size: 16px;
 }
 }
 /*                  breadcrumb                               */
@@ -2439,7 +2444,7 @@ text-transform: capitalize;
 }
 .submit-btn{
   width: 180px;
-  height: 55px;
+  height: 50px;
   border-radius: 25px;
   background-color: var(--main-color);
   color: #fff;
@@ -2496,6 +2501,9 @@ text-transform: capitalize;
   }
   html[dir="ltr"] .services-content p{
     font-size: 13px;
+  }
+  .breadcrumb-sec .page-head{
+    font-size: 20px;
   }
   .brands{
     padding: 50px 0 67px;
@@ -2649,7 +2657,7 @@ text-transform: capitalize;
     padding-top: 0;
   }
   .pagination{
-    display: none;
+    margin-top: 30px;
   }
   .extra-brands-margin .swiper-slide{
     margin-bottom: 20px;
@@ -2898,7 +2906,7 @@ text-transform: capitalize;
     width: 70%;
   }
   .partners-slider .swiper-slide{
-    background: #ebf1ec;
+ 
     height: 102px;
     align-items: center;
     justify-content: center;
@@ -2913,6 +2921,7 @@ text-transform: capitalize;
   }
   .extra-margin-bottom .about-us-pargh{
     margin: 0;
+    font-size: 16px;
   }
   .extra-margin-bottom .about-us-cont figure{
     margin: 0px auto 20px;
@@ -3037,6 +3046,9 @@ text-transform: capitalize;
   .clearfix{
     width: 70%;
   }
+  .breadcrumb-sec .page-head{
+    font-size: 24px;
+  }
   .services-content p{
     margin: 0 19px 22px;
     font-size: 14px;
@@ -3048,6 +3060,12 @@ text-transform: capitalize;
   .about-us-cont{
     flex-wrap: nowrap;
     align-items: flex-start;
+  }
+  .extra-margin .about-us-pargh{
+    font-size: 19px;
+  }
+  .why-us-list li{
+    font-size: 19px;
   }
   .about-us-cont figure{
     order:2;

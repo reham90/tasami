@@ -364,7 +364,7 @@ html[dir="ltr"] .nav-header .big-menu{
     visibility: visible;
     z-index: 99;
   }
-  .slide-menu:hover .btn-div a {
+  .slide-menu:hover .menu-name {
     color: var(--main-color);
   }
 }
@@ -386,7 +386,7 @@ html[dir="ltr"] .nav-header .big-menu{
   justify-content: space-between;
   text-align: center;
   border: none;
-  padding: 10px 0;
+  padding: 5px 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -416,6 +416,8 @@ html[dir="ltr"] .nav-header .big-menu{
   align-items: center;
   justify-content: center;
   width: 100%;
+  
+  
 }
 .cats-dispaly .cat-li:after{
   content: "";
@@ -462,7 +464,7 @@ width: 0;
   font-size: 12px;
   transition: 0.5s;
 }
-.btn-div.active .chevron-down::after{
+.menu-name.active.chevron-down::after{
   transform: rotate(180deg);
 }
 @media (max-width: 991px) {

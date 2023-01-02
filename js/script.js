@@ -37,13 +37,13 @@ $(document).ready(function () {
   
  
    //slide down menu
-   $(".btn-div").click(function (e) {
+   $(".menu-name").click(function (e) {
     e.preventDefault();
-    $(this).siblings(".cats-dispaly").slideToggle(400);
-    $(".btn-div").not(this).siblings(".cats-dispaly").slideUp(400);
+    $(this).siblings(".cats-display-2").slideToggle(400);
+    $(".menu-name").not(this).siblings(".cats-display-2").slideUp(400);
     if ($(window).width() <= 991) {
       $(this).toggleClass("active");
-      $(".btn-div").not(this).removeClass("active");
+      $(".menu-name").not(this).removeClass("active");
     }
   });}
 
